@@ -25,6 +25,7 @@ const Header: React.FC = () => {
   useKeyPress("s", () => router.push("/show/1"));
   useKeyPress("n", () => router.push("/new/1"));
   useKeyPress("a", () => router.push("/ask/1"));
+  useKeyPress("b", () => router.push("/best/1"));
   useKeyPress("x", () => router.push("/star"));
 
   // When mounted on client, now we can show the UI
@@ -40,6 +41,14 @@ const Header: React.FC = () => {
         <TopHNIcon className="h-4 w-4 mr-2 text-icon group-hover:text-primary" />
       ),
       kbd: "T",
+    },
+    {
+      label: "Best",
+      id: "best",
+      icon: (
+        <TopHNIcon className="h-4 w-4 mr-2 text-icon group-hover:text-primary" />
+      ),
+      kbd: "B",
     },
     {
       label: "Show",
